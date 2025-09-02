@@ -19,34 +19,38 @@ $$
 
 ## 📂 Project Structure
 
+```
+
 .
 ├── config/
-│ ├── init.py
-│ └── configuration.py # Central configuration (hyperparameters, model setup)
+│   ├── __init__.py
+│   └── configuration.py         # Central configuration (hyperparameters, model setup)
 │
 ├── data/
-│ ├── init.py
-│ ├── boundary_dataset.py # Boundary condition dataset
-│ ├── collocation_dataset.py # Interior collocation dataset
-│ ├── supervised_dataset.py # Optional supervised data (e.g. noisy measurements)
-│ └── build_dataloaders.py # Helper to construct DataLoaders
+│   ├── __init__.py
+│   ├── boundary\_dataset.py       # Boundary condition dataset
+│   ├── collocation\_dataset.py    # Interior collocation dataset
+│   ├── supervised\_dataset.py     # Optional supervised data (e.g. noisy measurements)
+│   └── build\_dataloaders.py      # Helper to construct DataLoaders
 │
 ├── model/
-│ ├── init.py
-│ ├── build_pinn.py # Build PINN wrapper from config
-│ ├── feedforward.py # Generic feedforward network (MLP)
-│ ├── pinn_wrapper.py # Combines network + PDE residual into PINN
-│ └── trainer.py # Training loop for PINNs
+│   ├── __init__.py
+│   ├── build\_pinn.py             # Build PINN wrapper from config
+│   ├── feedforward.py            # Generic feedforward network (MLP)
+│   ├── pinn\_wrapper.py           # Combines network + PDE residual into PINN
+│   └── trainer.py                # Training loop for PINNs
 │
 ├── utils/
-│ ├── init.py
-│ ├── device_setting.py # Device management (CPU/GPU)
-│ ├── diff_operators.py # Autograd-based differential operators
-│ ├── physics_pde_operators.py # PDE residual operators (e.g. Poisson1D)
-│ └── seed_setting.py # Reproducibility utilities
+│   ├── __init__.py
+│   ├── device\_setting.py         # Device management (CPU/GPU)
+│   ├── diff\_operators.py         # Autograd-based differential operators
+│   ├── physics\_pde\_operators.py  # PDE residual operators (e.g. Poisson1D)
+│   └── seed\_setting.py           # Reproducibility utilities
 │
-├── main.py # Entry point: trains and evaluates a PINN
+├── main.py                       # Entry point: trains and evaluates a PINN
 └── README.md
+
+````
 
 
 
